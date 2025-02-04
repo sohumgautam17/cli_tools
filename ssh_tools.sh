@@ -14,6 +14,10 @@ ssh-add -l
 chmod 600 ~/.ssh/id_rsa
 chmod 644 ~/.ssh/id_rsa.pub
 
+# SSH into server if you are using OpenSSH (Accept RSA keys
+ssh -o PubkeyAcceptedAlgorithms=+ssh-rsa -o HostkeyAlgorithms=+ssh-rsa {insert hostname}.runpod.io -i {path to private ssh key}
+
+
 # Go to github and add ssh key 
 ssh -T git@github.com
 
