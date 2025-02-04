@@ -1,5 +1,8 @@
-# create ssh key
+# create RSA ssh key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# Generate a new Ed25519 key pair
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
 
 eval "$(ssh-agent -s)"
 
